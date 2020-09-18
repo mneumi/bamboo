@@ -1,0 +1,19 @@
+<view class="container">
+  <swiper class="swiper" indicator-dots autoplay circular interval="1500" indicator-active-color="#1296db">
+    <swiper-item>
+      <image src="/assets/images/swiper-1.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/assets/images/swiper-2.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/assets/images/swiper-3.png"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{list}}" wx:key="id">
+    <article-item avatarURL="{{item.avatarURL}}" date="{{item.date}}" title="{{item.title}}"
+      coverURL="{{item.coverURL}}" desc="{{item.desc}}" collection="{{item.collection}}" see="{{item.see}}" />
+  </block>
+  <view wx:if="{{loading}}">加载中 ...</view>
+  <view wx:if="{{done}}">全部加载完毕</view>
+</view>

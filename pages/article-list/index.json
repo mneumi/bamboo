@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "article-item": "/components/article-item/index"
+  },
+  "enablePullDownRefresh": true
+}

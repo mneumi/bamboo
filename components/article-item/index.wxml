@@ -1,0 +1,21 @@
+<wxs src="./tools.wxs" module="tools"></wxs>
+
+<view class="container">
+  <view class="header-wrapper">
+    <image class="img" src="{{ avatarURL }}"></image>
+    <text class="date">{{ date }}</text>
+  </view>
+  <view class="title-wrapper">
+    <text class="title">{{ title }}</text>
+  </view>
+  <image class="cover" src="{{ coverURL}}"></image>
+  <view class="desc-wrapper">
+    {{ tools.truncate(desc) }}
+  </view>
+  <view class="data-wrapper">
+    <image class="collection-icon icon" src="/assets/icons/collection.png"></image>
+    <view class="collection-text text">{{ collection }}</view>
+    <image class="see-icon icon" src="/assets/icons/see.png"></image>
+    <view class="see-text text">{{ see }}</view>
+  </view>
+</view>

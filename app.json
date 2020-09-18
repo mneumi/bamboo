@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/recommend/index",
+    "pages/article-list/index",
+    "pages/article-detail/index",
+    "pages/movies-list/index",
+    "pages/movies-detail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1296db",
+    "list": [{
+      "pagePath": "pages/recommend/index",
+      "text": "推荐",
+      "iconPath": "/assets/tab-icons/recommend-1.png",
+      "selectedIconPath": "/assets/tab-icons/recommend-2.png"
+    },
+    {
+      "pagePath": "pages/article-list/index",
+      "text": "文章",
+      "iconPath": "/assets/tab-icons/article-1.png",
+      "selectedIconPath": "/assets/tab-icons/article-2.png"
+    },
+    {
+      "pagePath": "pages/movies-list/index",
+      "text": "电影",
+      "iconPath": "/assets/tab-icons/movie-1.png",
+      "selectedIconPath": "/assets/tab-icons/movie-2.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
