@@ -1,66 +1,60 @@
-// pages/article-detail/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    isCollected: false,
+    postId: -1
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    const postId = options.postid;
 
+    let isCollected = false;
+    const keyName = `postId-${postId}`;
+
+    let articlesStorage = wx.getStorageSync('articlesStorage');
+
+    if (!articlesStorage) {
+      articlesStorage = {
+        [keyName]: false
+      };
+    } else if (articlesStorage && !articlesStorage.hasOwnProperty(keyName)) {
+      articlesStorage[keyName] = false;
+    } else {
+      isCollected = articlesStorage[keyName];
+    }
+
+    wx.setStorageSync('articlesStorage', articlesStorage);
+
+    this.setData({
+      postId,
+      isCollected
+    });
   },
+  changeCollect() {
+    const articlesStorage = wx.getStorageSync('articlesStorage');
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+    const keyName = `postId-${this.data.postId}`;
 
+    articlesStorage[keyName] = !articlesStorage[keyName];
+    wx.setStorageSync('articlesStorage', articlesStorage);
+
+    this.setData({
+      isCollected: !this.data.isCollected
+    });
+
+    let toastHint = '已收藏文章';
+    
+    if (!articlesStorage[keyName]) {
+      toastHint = '已取消收藏';
+    }
+    
+    wx.showToast({
+      title: toastHint,
+      icon: "none",
+      duration: 2000
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShare() {
+    wx.showActionSheet({
+      itemList: ['分享到QQ','分享到微信'],
+    });
   }
 })

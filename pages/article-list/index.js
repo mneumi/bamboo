@@ -1,23 +1,16 @@
 const { request } = require("../../utils/request.js");
 
 Page({
-  data: {
-    currentPage: 0,
-    done: false,
-    loading: false,
-    list: []
-  },
   onLoad() {
     this.setData({
       currentPage: 0,
       done: false,
       loading: false,
+      networkError: false,
       list: []
     });
 
     this.updateArticleList(this.data.currentPage);
-
-    wx.stopPullDownRefresh();
   },
   onPullDownRefresh() {
     this.onLoad();
@@ -44,6 +37,19 @@ Page({
         currentPage: this.data.currentPage + 1,
         loading: false
       });
-    })
+      wx.stopPullDownRefresh();
+    }).catch(err => {
+      this.setData({
+        networkError: true,
+        loading: false
+      });
+      wx.stopPullDownRefresh();
+    });
+  },
+  handleBtnClick(event) {
+    const postId = event.currentTarget.dataset.postId;
+    wx.navigateTo({
+      url: `/pages/article-detail/index?postid=${postId}`,
+    });
   }
 });

@@ -12,8 +12,11 @@
   </swiper>
   <block wx:for="{{list}}" wx:key="id">
     <article-item avatarURL="{{item.avatarURL}}" date="{{item.date}}" title="{{item.title}}"
-      coverURL="{{item.coverURL}}" desc="{{item.desc}}" collection="{{item.collection}}" see="{{item.see}}" />
+      coverURL="{{item.coverURL}}" desc="{{item.desc}}" collection="{{item.collection}}" see="{{item.see}}" 
+      data-post-id="{{item.id}}"  bind:tap="handleBtnClick"
+    />
   </block>
-  <view wx:if="{{loading}}">加载中 ...</view>
-  <view wx:if="{{done}}">全部加载完毕</view>
+  <view class="hint" wx:if="{{loading}}">加载中 ...</view>
+  <view class="hint" wx:if="{{networkError}}">网络异常，请稍后重试</view>
+  <view class="hint" wx:if="{{done}}">全部加载完毕</view>
 </view>

@@ -1,1 +1,102 @@
-/* pages/article-detail/index.wxss */
+page {
+  overflow-x: hidden;
+}
+
+.img-wrapper, .cover {
+  width: 750rpx;
+  height: 450rpx;
+}
+
+.header-wrapper {
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.header-wrapper .image-wrapper image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.header-wrapper > view {
+  margin-left: 30rpx;
+  color: #666;
+}
+
+.prefix, .time {
+  font-size: 25rpx;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 16rpx;
+  margin-bottom: 30rpx;
+}
+
+.title-wrapper .title {
+  margin-left: 32rpx;
+  font-weight: 600;
+  font-size: 36rpx;
+}
+
+.btn-wrapper {
+  width: 750rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.btn-wrapper .line {
+  width: 630rpx;
+  height: 1rpx;
+  background-color: rgba(0,0,0,0.2);
+  position: absolute;
+}
+
+.btn-wrapper .btn-group {
+  width: 180rpx;
+  z-index: 100;
+  margin-left: 490rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-wrapper .btn-group .btn {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share {
+  background-color: green !important;
+}
+
+.collected {
+  background-color: #1296db !important;
+}
+
+.btn-wrapper .btn-group .btn image {
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 5rpx;
+}
+
+.content {
+  height: 500rpx;
+}
+
+.content {
+  padding: 30rpx;
+  letter-spacing: 2rpx;
+  line-height: 50rpx;
+  color: #666;
+}

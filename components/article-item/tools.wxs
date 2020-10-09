@@ -1,4 +1,8 @@
 var truncate = function(text) {
+  if (!text) {
+    return "";
+  }
+
   if (text.length <= 80) {
     return text;
   }
