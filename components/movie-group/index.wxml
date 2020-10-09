@@ -1,0 +1,11 @@
+<view class='group-wrapper b-class'>
+  <view class='title-bar-wrapper'>
+    <view class='title'>{{ title }}</view>
+    <view class='more'>更多 ></view>
+  </view>
+  <view class='items-wrapper'>
+    <movie-item />
+    <movie-item />
+    <movie-item />
+  </view>
+</view>

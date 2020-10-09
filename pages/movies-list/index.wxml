@@ -1,2 +1,3 @@
-<!--pages/movies-list/index.wxml-->
-<text>pages/movies-list/index.wxml</text>
+<movie-group title='最近热映' b-class='group'></movie-group>
+<movie-group title='即将上映' b-class='group'></movie-group>
+<movie-group title='Top250' b-class='group'></movie-group>

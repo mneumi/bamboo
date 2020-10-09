@@ -1,1 +1,7 @@
-/* pages/movies-list/index.wxss */
+page {
+  background-color: rgba(245,245,245,1);
+}
+
+.group {
+  margin-bottom: 40rpx;
+}

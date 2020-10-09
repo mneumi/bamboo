@@ -1,0 +1,9 @@
+<view class='wrapper'>
+  <image src='/assets/images/movie-cover.webp'></image>
+  <view class='title'>
+    后来的我们1111111111111
+  </view>
+  <view class='star'>
+    <star score='3.6' />
+  </view>
+</view>

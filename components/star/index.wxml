@@ -1,0 +1,15 @@
+<view class='wrapper'>
+  <view class='stars'>
+    <block wx:for="{{scoreArray}}" wx:key="index">
+      <view wx:if="{{item === 1}}">
+        <image class='star' src='/assets/icons/star-1.png' />
+      </view>
+      <view wx:else>
+        <image class='star' src='/assets/icons/star-2.png' />
+      </view>
+    </block>
+  </view>
+  <view class='score'>
+    {{ score }}
+  </view>
+</view>

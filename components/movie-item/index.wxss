@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 210rpx;
+}
+
+image {
+  width: 210rpx;
+  height: 308rpx;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
