@@ -1,0 +1,122 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 350rpx;
+  color: white;
+  position: relative;
+  background-color: blue;
+}
+
+.top-wrapper .title {
+  font-weight: 800;
+  font-size: 50rpx;
+  line-height: 50rpx;
+  margin: 50rpx 0 40rpx 30rpx;
+}
+
+.top-wrapper .country {
+  margin-bottom: 90rpx;
+  margin-left: 30rpx;
+}
+
+.top-wrapper .statistics {
+  margin-left: 30rpx;
+}
+
+.top-wrapper .statistics .number {
+  color: orange;
+  margin-right: 10rpx;
+}
+
+.top-wrapper .statistics .word {
+  margin-right: 30rpx;
+  color: grey;
+}
+
+.top-wrapper .cover {
+  width: 190rpx;
+  height: 280rpx;
+  background-color: orange;
+  position: absolute;
+  left: 535rpx;
+  top: 150rpx;
+}
+
+.top-wrapper .cover image {
+  width: 190rpx;
+  height: 280rpx;
+}
+
+.basic-wrapper {
+  height: 400rpx;
+  /* background-color: yellowgreen; */
+  border-bottom: 1rpx solid grey;
+}
+
+.basic-wrapper .title {
+  margin: 50rpx 30rpx;
+  font-weight: 800;
+}
+
+.basic-wrapper .item {
+  display: flex;
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.basic-wrapper .item .key {
+  margin-right: 20rpx;
+  color: grey;
+  white-space: nowrap;
+}
+
+.basic-wrapper .item .value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.drama-wrapper {
+  border-bottom: 1rpx solid grey;
+}
+
+.drama-wrapper .title {
+  margin: 50rpx 30rpx;
+  font-weight: 800;
+}
+
+.drama-wrapper .desc {
+  margin: 0 30rpx 100rpx 30rpx;
+  line-height: 50rpx;
+}
+
+.staff-wrapper .title {
+  margin: 50rpx 30rpx;
+  font-weight: 800;
+}
+
+.staff-wrapper .scroll-box {
+  display: flex;
+  overflow: auto;
+  margin: 30rpx;
+  height: 400rpx;
+}
+
+.staff-wrapper .scroll-box .item {
+  display: flex;
+  flex-direction: column;
+  width: 210rpx;
+  margin-right: 30rpx;
+}
+
+.staff-wrapper .scroll-box .item .img {
+  width: 210rpx;
+  height: 308rpx;
+  background-color: orange;
+  margin-bottom: 20rpx;
+}
