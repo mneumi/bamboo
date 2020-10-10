@@ -15,6 +15,7 @@
 
 .title-bar-wrapper .more {
   color: #0B61A4;
+  font-size: 28rpx;
 }
 
 .items-wrapper {

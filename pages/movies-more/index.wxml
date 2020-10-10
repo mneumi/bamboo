@@ -1,0 +1,5 @@
+<view class='wrapper'>
+  <block wx:for='{{22}}'>
+    <movie-item></movie-item>
+  </block>
+</view>
